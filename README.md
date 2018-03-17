@@ -2,6 +2,8 @@
 
 UWP.MDI provides Multiple document interface (MDI) support for UWP applications.
 
+https://img.shields.io/nuget/dt/UWP.MDI.svg
+
 ## Background
 
 MDI (Multiple Document Interface) was popular user interface paradigma in Windows Forms era. MDI allows one window to host multiple child windows. Each window can be resized and moved around.

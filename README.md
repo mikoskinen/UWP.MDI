@@ -1,6 +1,6 @@
 # UWP.MDI
 
-UWP.MDI provides MDI support for UWP applications.
+UWP.MDI provides Multiple document interface (MDI) support for UWP applications.
 
 ## Background
 

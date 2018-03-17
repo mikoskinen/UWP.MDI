@@ -18,6 +18,7 @@ UWP.MDI has two targets:
 1. Create a blank Universal Windows Application
 2. Reference UWP.MDI
 3. Add MDIContainer to MainPage:
+```xml
 <Page
     x:Class="UWP.MDI.Sample.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -33,6 +34,7 @@ UWP.MDI has two targets:
         <mdi:MDIContainer />
     </Grid>
 </Page>
+```
 
 4. Create UserControl with the content you like.
 5. In MainApplication, create a new instance of the UserControl and use Show-method to display it:

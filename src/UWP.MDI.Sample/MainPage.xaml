@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="UWP.MDI.Sample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWP.MDI.Sample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:mdi="using:UWP.MDI.Controls"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <controls:Menu Grid.Row="0">
+            <controls:MenuItem Name="FileMenu" controls:Menu.InputGestureText="Alt+F" Header="File">
+                <MenuFlyoutItem Text="Customers" x:Name="CustomersMenuItem" Click="CustomersMenuItem_OnClick" />
+                <MenuFlyoutItem Text="Invoices" x:Name="InvoicesMenuItem" Click="InvoicesMenuItem_OnClick" />
+                <MenuFlyoutSeparator/>
+                <MenuFlyoutItem Text="Exit" x:Name="ExitMenuItem" Click="ExitMenuItem_OnClick" />
+            </controls:MenuItem>
+        </controls:Menu>
+
+        <mdi:MDIContainer Grid.Row="1" x:Name="Mdi"/>
+    </Grid>
+</Page>

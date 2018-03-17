@@ -1,0 +1,27 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mdiContainer="using:UWP.MDI.Controls">
+
+    <Style TargetType="mdiContainer:MDIContainer">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="mdiContainer:MDIContainer">
+                    <Grid>
+
+                        <ItemsControl x:Name="MinimizedItems">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <ItemsWrapGrid Orientation="Horizontal" VerticalAlignment="Bottom" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+
+                        <Canvas x:Name="Items" />
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

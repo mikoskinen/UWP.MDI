@@ -2,7 +2,7 @@
 
 UWP.MDI provides Multiple document interface (MDI) support for UWP applications.
 
-https://img.shields.io/nuget/dt/UWP.MDI.svg
+[![NuGet](https://img.shields.io/nuget/v/UWP.MDI.svg)](https://www.nuget.org/packages/UWP.MDI/)
 
 ## Background
 
@@ -18,7 +18,7 @@ UWP.MDI has two targets:
 ## Getting started
 
 1. Create a blank Universal Windows Application
-2. Reference UWP.MDI
+2. Add UWP.MDI from NuGet
 3. Add MDIContainer to MainPage:
 ```xml
 <Page

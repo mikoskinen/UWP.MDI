@@ -20,6 +20,7 @@ namespace UWP.MDI.Controls
         private Size _previousSize;
         private const double MinimumHeight = 90;
         private const double MinimumWidth = 24;
+        private FormBorderStyle _formBorderStyle;
 
         public MDIChild(Control innerControl) : this()
         {
@@ -50,6 +51,11 @@ namespace UWP.MDI.Controls
         public Button CloseButton { get; private set; }
         public Button MinimizeButton { get; private set; }
 
+        public FormBorderStyle FormBorderStyle
+        {
+            get { return _formBorderStyle; }
+        }
+
         private MDIContainer MDIParent
         {
             get
@@ -67,6 +73,8 @@ namespace UWP.MDI.Controls
 
         public void Activate()
         {
+            Activating?.Invoke(this, this);
+
             Canvas.SetZIndex(this, 1);
             VisualStateManager.GoToState(this, "Active", false);
 
@@ -173,9 +181,9 @@ namespace UWP.MDI.Controls
 
             MDIContent.Content = _innerControl;
 
-            var apBorder = (FormBorderStyle)_innerControl.GetValue(FormProperties.FormBorderStyleProperty);
+            _formBorderStyle = (FormBorderStyle)_innerControl.GetValue(FormProperties.FormBorderStyleProperty);
 
-            if (apBorder != FormBorderStyle.Fixed)
+            if (_formBorderStyle != FormBorderStyle.Fixed)
             {
                 EnableResizing();
             }
@@ -253,7 +261,6 @@ namespace UWP.MDI.Controls
                 return;
             }
 
-            Activating?.Invoke(this, this);
             Activate();
         }
 
@@ -414,7 +421,6 @@ namespace UWP.MDI.Controls
 
         private void MainContainer_OnPointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            Activating?.Invoke(this, this);
             Activate();
         }
 

@@ -7,8 +7,8 @@
     <ProjectGuid>{9B56D64A-CA9D-45FE-97DB-BBAF71AA0598}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UWP.MDI.Sample</RootNamespace>
-    <AssemblyName>UWP.MDI.Sample</AssemblyName>
+    <RootNamespace>UWP.MDI.Samples.GettingStarted</RootNamespace>
+    <AssemblyName>UWP.MDI.GettingStarted</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
@@ -110,7 +110,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="UWP.MDI.Sample_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />

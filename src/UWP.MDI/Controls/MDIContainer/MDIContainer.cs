@@ -9,6 +9,8 @@ namespace UWP.MDI.Controls
     {
         public static Action<Control, MDIChild, MDIContainer> Configure = ConfigureMdiControl;
         public static Action<Control, MDIChild, MDIContainer> BeforeShow = (control, mdiChild, container) => { };
+        public double DefaultChildWidth { get; set; } = 300;
+        public double DefaultChildHeight { get; set; } = 300;
 
         public MDIContainer()
         {
@@ -25,6 +27,11 @@ namespace UWP.MDI.Controls
             Items.Children.Add(child);
 
             child.Loaded += ChildOnLoaded;
+        }
+
+        public void LayoutMdi(MdiLayout layout)
+        {
+            layout?.RunLayout(this);
         }
 
         protected override void OnApplyTemplate()
@@ -67,6 +74,7 @@ namespace UWP.MDI.Controls
             Configure(child.InnerControl, child, this);
             BeforeShow(child.InnerControl, child, this);
             CreateChildEventHandlers(child);
+            child.Activate();
 
             child.Opacity = 1;
         }
@@ -84,16 +92,6 @@ namespace UWP.MDI.Controls
 
         private static void ConfigureMdiControl(Control control, MDIChild child, MDIContainer mdiContainer)
         {
-            foreach (var item in mdiContainer.Items.Children)
-            {
-                if (item is MDIChild mdiChild)
-                {
-                    mdiChild.Deactivate();
-                }
-            }
-
-            child.Activate();
-
             HandleStartPosition(control, child, mdiContainer);
         }
 
@@ -110,8 +108,8 @@ namespace UWP.MDI.Controls
         {
             var child = new MDIChild(control)
             {
-                Width = double.IsNaN(control.Width) ? 300 : control.Width,
-                Height = double.IsNaN(control.Height) ? 300 : control.Height
+                Width = double.IsNaN(control.Width) ? DefaultChildWidth : control.Width,
+                Height = double.IsNaN(control.Height) ? DefaultChildHeight : control.Height
             };
 
             return child;

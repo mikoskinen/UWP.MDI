@@ -46,7 +46,7 @@ UWP.MDI has two targets:
 			
 ## Samples ##
 
-The repository contains samples-folder where you can find GettingStarted-sample. 
+For samples, check out the samples folder inside this repository.  
 			
 ## Basics ##
 
@@ -91,6 +91,16 @@ The settings/configuration for child windows are provided using attached propert
 Title: FormProperties.Text
 Starting position: FormProperties.FormStartPosition
 Resizable or not: FormProperties.FormBorderStyle
+
+## Layouts ##
+
+UWP.MDI contains three built-in layouts for your child windows: TileHorizontal, TileVertical and Cascade. You can organize your current windows at any point by calling MDIContainer.LayoutMdi.
+
+For example:
+
+mdiContainer.LayoutMdi(MdiLayout.Cascade);
+
+For sample see samples\UWP.MDI.Layouts
 
 ## Dependencies
 

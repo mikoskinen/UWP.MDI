@@ -5,7 +5,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace UWP.MDI.Samples.GettingStarted
+namespace UWP.MDI.Samples.Layouts
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.

@@ -177,7 +177,11 @@ namespace UWP.MDI.Controls
 
             if (apBorder != FormBorderStyle.Fixed)
             {
-                EnableResizing(this);
+                EnableResizing();
+            }
+            else
+            {
+                DisableResizing();
             }
 
             var apTitle = _innerControl.GetValue(FormProperties.TextProperty);
@@ -195,18 +199,47 @@ namespace UWP.MDI.Controls
             CloseButton.Click += CloseButtonOnClick;
         }
 
-        private void EnableResizing(MDIChild child)
+        private void EnableResizing()
         {
-            child.ResizeRight.DragDelta += OnResizeRightOnDragDelta;
-            child.ResizeLeft.DragDelta += OnResizeLeftOnDragDelta;
-            child.ResizeTop.DragDelta += OnResizeTopOnDragDelta;
-            child.ResizeBottom.DragDelta += OnResizeBottomOnDragDelta;
-            child.ResizeBottomRight.DragDelta += OnResizeBottomRightOnDragDelta;
-            child.ResizeTopRight.DragDelta += OnResizeTopRightOnDragDelta;
-            child.ResizeTopLeft.DragDelta += OnResizeTopLeftOnDragDelta;
-            child.ResizeBottomLeft.DragDelta += OnResizeBottomLeftOnDragDelta;
+            ResizeRight.DragDelta += OnResizeRightOnDragDelta;
+            ResizeLeft.DragDelta += OnResizeLeftOnDragDelta;
+            ResizeTop.DragDelta += OnResizeTopOnDragDelta;
+            ResizeBottom.DragDelta += OnResizeBottomOnDragDelta;
+            ResizeBottomRight.DragDelta += OnResizeBottomRightOnDragDelta;
+            ResizeTopRight.DragDelta += OnResizeTopRightOnDragDelta;
+            ResizeTopLeft.DragDelta += OnResizeTopLeftOnDragDelta;
+            ResizeBottomLeft.DragDelta += OnResizeBottomLeftOnDragDelta;
+
+            ResizeRight.IsEnabled = true;
+            ResizeLeft.IsEnabled = true;
+            ResizeTop.IsEnabled = true;
+            ResizeBottom.IsEnabled = true;
+            ResizeBottomRight.IsEnabled = true;
+            ResizeTopRight.IsEnabled = true;
+            ResizeTopLeft.IsEnabled = true;
+            ResizeBottomLeft.IsEnabled = true;
         }
 
+        private void DisableResizing()
+        {
+            ResizeRight.DragDelta -= OnResizeRightOnDragDelta;
+            ResizeLeft.DragDelta -= OnResizeLeftOnDragDelta;
+            ResizeTop.DragDelta -= OnResizeTopOnDragDelta;
+            ResizeBottom.DragDelta -= OnResizeBottomOnDragDelta;
+            ResizeBottomRight.DragDelta -= OnResizeBottomRightOnDragDelta;
+            ResizeTopRight.DragDelta -= OnResizeTopRightOnDragDelta;
+            ResizeTopLeft.DragDelta -= OnResizeTopLeftOnDragDelta;
+            ResizeBottomLeft.DragDelta -= OnResizeBottomLeftOnDragDelta;
+
+            ResizeRight.IsEnabled = false;
+            ResizeLeft.IsEnabled = false;
+            ResizeTop.IsEnabled = false;
+            ResizeBottom.IsEnabled = false;
+            ResizeBottomRight.IsEnabled = false;
+            ResizeTopRight.IsEnabled = false;
+            ResizeTopLeft.IsEnabled = false;
+            ResizeBottomLeft.IsEnabled = false;
+        }
         private void CloseButtonOnClick(object o, RoutedEventArgs routedEventArgs)
         {
             RemoveEventHandlers();

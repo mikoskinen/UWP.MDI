@@ -17,7 +17,7 @@
         <controls:Menu Grid.Row="0">
             <controls:MenuItem Name="FileMenu" controls:Menu.InputGestureText="Alt+F" Header="File">
                 <MenuFlyoutItem Text="Customers" x:Name="CustomersMenuItem" Click="CustomersMenuItem_OnClick" />
-                <MenuFlyoutItem Text="Invoices" x:Name="InvoicesMenuItem" Click="InvoicesMenuItem_OnClick" />
+                <MenuFlyoutItem Text="Invoices (Fixed size)" x:Name="InvoicesMenuItem" Click="InvoicesMenuItem_OnClick" />
                 <MenuFlyoutSeparator/>
                 <MenuFlyoutItem Text="Exit" x:Name="ExitMenuItem" Click="ExitMenuItem_OnClick" />
             </controls:MenuItem>

@@ -152,7 +152,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UWP.MDI\UWP.MDI.csproj">
+    <ProjectReference Include="..\..\src\UWP.MDI\UWP.MDI.csproj">
       <Project>{7aacc597-c156-4392-bb15-bba49cc830bf}</Project>
       <Name>UWP.MDI</Name>
     </ProjectReference>

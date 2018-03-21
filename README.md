@@ -18,7 +18,7 @@ UWP.MDI has two targets:
 ## Getting started
 
 1. Create a blank Universal Windows Application
-2. Add UWP.MDI from NuGet
+2. Add UWP.MDI from NuGet https://www.nuget.org/packages/UWP.MDI/
 3. Add MDIContainer to MainPage:
 ```xml
 <Page
@@ -44,9 +44,9 @@ UWP.MDI has two targets:
             var frm = new CustomerForm();
             frm.Show();
 			
-## Sample ##
+## Samples ##
 
-The repository contains UWP.MDI.Sample, which contains two different child windows.
+The repository contains samples-folder where you can find GettingStarted-sample. 
 			
 ## Basics ##
 

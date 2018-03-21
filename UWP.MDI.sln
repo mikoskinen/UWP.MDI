@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWP.MDI.Sample", "UWP.MDI.Sample\UWP.MDI.Sample.csproj", "{9B56D64A-CA9D-45FE-97DB-BBAF71AA0598}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWP.MDI.GettingStarted", "samples\UWP.MDI.GettingStarted\UWP.MDI.GettingStarted.csproj", "{9B56D64A-CA9D-45FE-97DB-BBAF71AA0598}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWP.MDI", "UWP.MDI\UWP.MDI.csproj", "{7AACC597-C156-4392-BB15-BBA49CC830BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWP.MDI", "src\UWP.MDI\UWP.MDI.csproj", "{7AACC597-C156-4392-BB15-BBA49CC830BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{D98711F3-6487-4716-9D6F-BC30B0F60A2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +62,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B56D64A-CA9D-45FE-97DB-BBAF71AA0598} = {D98711F3-6487-4716-9D6F-BC30B0F60A2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7BA0B6CA-5E45-4B99-8D6F-C4FD621AE2A5}

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>UWP.MDI</id>
+    <version>1.1.0.0</version>
+    <title>UWP.MDI</title>
+    <authors>Mikael Koskinen</authors>
+    <owners></owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/mikoskinen/UWP.MDI/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/mikoskinen/UWP.MDI</projectUrl>
+    <description>UWP.MDI provides Multiple document interface (MDI) support for UWP applications.</description>
+    <summary></summary>
+    <copyright>Copyright (c) 2018 Mikael Koskinen</copyright>
+    <tags>uwp mdi</tags>
+  </metadata>
+</package>

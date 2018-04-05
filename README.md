@@ -10,10 +10,11 @@ MDI (Multiple Document Interface) was popular user interface paradigma in Window
 
 When WPF was released, it didn't contain support for MDI interfaces and the situation didn't change when WinRT and UWP were released.
 
-UWP.MDI has two targets: 
+UWP.MDI has three targets: 
 
 1. To provide comprehensive MDI support for UWP applications. 
 2. To provide MDI support in such a way that those familiar with Windows Forms' MDI support feel at home.
+3. To provide the extra benefits of MVVM & Data binding & XAML into the MDI world.
 
 ## Getting started
 
@@ -58,7 +59,7 @@ Use attached properties provided by FormProperties to configure the basic settin
 
 ## MVVM Support ##
 
-https://github.com/mikoskinen/UWP.MDI/issues/2
+See the following sample: https://github.com/mikoskinen/UWP.MDI/tree/master/samples/UWP.MDI.MVVM
 
 ## Customizations ##
 

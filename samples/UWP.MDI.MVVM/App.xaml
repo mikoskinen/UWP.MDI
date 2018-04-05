@@ -1,0 +1,12 @@
+﻿<Application
+    x:Class="UWP.MDI.Samples.MVVM.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mvvm="using:UWP.MDI.Samples.MVVM"
+    xmlns:infrastructure="using:UWP.MDI.Samples.MVVM.Infrastructure"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <infrastructure:ViewModelLocator x:Name="ViewModelLocator" x:Key="ViewModelLocator"/>
+    </Application.Resources>
+</Application>
